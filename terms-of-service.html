@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - DMV Qube</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /*--primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #10b981;*/
+            --primary-color: #03AC13;
+            /*--primary-color: #046307;*/
+            /* Shamrock Green (was Blue #2563eb) */
+            --secondary-color: #028A0F;
+            /* Shamrock Dark (was Dark Blue #1e40af) */
+            --accent-color: #4CAF50;
+            /* Shamrock Light (was Teal #10b981) */
+            /*--text-dark: #1f2937;
+            --text-dark: #254629;
+            --text-dark: #223d25;
+            --text-dark: #182b1a;
+            --text-dark: #192c1c;
+            --text-light: #6b7280;*/
+            --text-dark: #223d25;
+            --text-light: #748676;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-light);
+        }
+
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            /*background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 8px;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .back-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .version-info {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--bg-light);
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        ul {
+            margin-bottom: 1rem;
+            margin-left: 2rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        strong {
+            color: var(--text-dark);
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid var(--bg-light);
+            margin: 2rem 0;
+        }
+
+        .consent-box {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        footer {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem 2rem;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            main {
+                padding: 1rem;
+                margin: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <!--<div class="logo-icon">DQ</div>-->
+                <div class="logo-icon"><img src="./assets/Qube-mipmap6.png" alt="DMV Qube logo"></div>
+                <span>DMV Qube</span>
+            </a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Terms of Service</h1>
+        <div class="version-info">
+            <p><strong>Last Updated:</strong> November 24, 2025<br>
+                <strong>Effective Date:</strong> November 24, 2025<br>
+                <strong>Version:</strong> 0.8
+            </p>
+        </div>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>By accessing and using DMV Qube ("the Service"), you accept and agree to be bound by the terms and provision
+            of this agreement. If you do not agree to abide by the above, please do not use this service.</p>
+
+        <h2>2. Description of Service</h2>
+        <p>DMV Qube provides inventory management, order processing, and supplier marketplace services to SMEs in
+            Nigeria, including but not limited to:</p>
+        <ul>
+            <li>Inventory tracking and management</li>
+            <li>Order creation and fulfillment</li>
+            <li>Supplier discovery and subscription</li>
+            <li>Business analytics and reporting</li>
+            <li>Cloud synchronization and offline access</li>
+        </ul>
+
+        <h2>3. User Accounts and Registration</h2>
+
+        <h3>3.1 Account Creation</h3>
+        <p>To use DMV Qube, you must:</p>
+        <ul>
+            <li>Be at least 18 years of age</li>
+            <li>Provide accurate, current, and complete information during registration</li>
+            <li>Maintain and update your information to keep it accurate and current</li>
+            <li>Maintain the security of your password and account</li>
+            <li>Accept full responsibility for all activities under your account</li>
+        </ul>
+
+        <h3>3.2 Account Types</h3>
+        <p>DMV Qube offers three subscription tiers:</p>
+        <ul>
+            <li><strong>Retailer:</strong> ₦17,500/month</li>
+            <li><strong>Wholesaler:</strong> ₦28,000/month</li>
+            <li><strong>Producer:</strong> ₦36,000/month</li>
+        </ul>
+        <p>All accounts require a one-time registration fee of ₦23,500.</p>
+
+        <h2>4. Subscription Terms</h2>
+
+        <h3>4.1 Free Trial</h3>
+        <p>New users receive a 7-day free trial period with full access to all features.</p>
+
+        <h3>4.2 Payment Terms</h3>
+        <ul>
+            <li>Subscriptions are billed monthly in advance</li>
+            <li>Registration fee is due at the end of the trial period</li>
+            <li>Payments are non-refundable except as required by law</li>
+            <li>Prices may change with 30 days advance notice</li>
+        </ul>
+
+        <h3>4.3 Grace Period</h3>
+        <p>If payment fails, you will receive a 5-day grace period to update payment information before service
+            suspension.</p>
+
+        <h3>4.4 Cancellation</h3>
+        <p>You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing
+            period.</p>
+
+        <h2>5. User Conduct</h2>
+        <p>You agree NOT to:</p>
+        <ul>
+            <li>Use the service for any unlawful purpose</li>
+            <li>Attempt to gain unauthorized access to the service</li>
+            <li>Interfere with or disrupt the service</li>
+            <li>Upload malicious code or viruses</li>
+            <li>Violate any applicable laws or regulations</li>
+            <li>Infringe on intellectual property rights</li>
+            <li>Harass, abuse, or harm other users</li>
+        </ul>
+
+        <h2>6. Data and Privacy</h2>
+
+        <h3>6.1 Your Data</h3>
+        <p>You retain all rights to data you input into DMV Qube. We do not claim ownership of your inventory, order, or
+            business data.</p>
+
+        <h3>6.2 Data Collection</h3>
+        <p>We collect and process data as described in our Privacy Policy, which is incorporated into these Terms by
+            reference.</p>
+
+        <h3>6.3 Data Security</h3>
+        <p>We implement industry-standard security measures to protect your data, but cannot guarantee absolute
+            security.</p>
+
+        <h3>6.4 Data Backup</h3>
+        <p>While we maintain regular backups, you are responsible for maintaining your own backup copies of critical
+            business data.</p>
+
+        <h2>7. Intellectual Property</h2>
+
+        <h3>7.1 Service Ownership</h3>
+        <p>DMV Qube and all related trademarks, service marks, and content are owned by Dsquare Multiconcepts Ventures.
+        </p>
+
+        <h3>7.2 License Grant</h3>
+        <p>We grant you a limited, non-exclusive, non-transferable license to use the Service for your business
+            purposes.</p>
+
+        <h3>7.3 Restrictions</h3>
+        <p>You may not:</p>
+        <ul>
+            <li>Copy, modify, or create derivative works</li>
+            <li>Reverse engineer or decompile the software</li>
+            <li>Remove proprietary notices</li>
+            <li>Use the Service to create a competing product</li>
+        </ul>
+
+        <h2>8. Third-Party Services</h2>
+        <p>DMV Qube integrates with third-party services for:</p>
+        <ul>
+            <li>Payment processing (Paystack)</li>
+            <li>Cloud storage (Supabase)</li>
+            <li>Analytics and monitoring</li>
+        </ul>
+        <p>Use of these services is subject to their respective terms and policies.</p>
+
+        <h2>9. Service Availability</h2>
+
+        <h3>9.1 Uptime</h3>
+        <p>We strive for 99% uptime but do not guarantee uninterrupted service.</p>
+
+        <h3>9.2 Maintenance</h3>
+        <p>Scheduled maintenance will be announced in advance when possible.</p>
+
+        <h3>9.3 Service Modifications</h3>
+        <p>We reserve the right to modify, suspend, or discontinue any part of the Service with reasonable notice.</p>
+
+        <h2>10. Limitation of Liability</h2>
+        <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
+        <ul>
+            <li>THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND</li>
+            <li>WE ARE NOT LIABLE FOR ANY INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES</li>
+            <li>OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID IN THE LAST 12 MONTHS</li>
+            <li>WE ARE NOT RESPONSIBLE FOR BUSINESS LOSSES, DATA LOSS, OR LOST PROFITS</li>
+        </ul>
+
+        <h2>11. Indemnification</h2>
+        <p>You agree to indemnify and hold harmless DMV Qube, Dsquare Multiconcepts Ventures, and affiliates from any
+            claims arising from:</p>
+        <ul>
+            <li>Your use of the Service</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any third-party rights</li>
+        </ul>
+
+        <h2>12. Dispute Resolution</h2>
+
+        <h3>12.1 Governing Law</h3>
+        <p>These Terms are governed by the laws of the Federal Republic of Nigeria.</p>
+
+        <h3>12.2 Arbitration</h3>
+        <p>Disputes shall first be attempted to be resolved through good-faith negotiation. If unsuccessful, disputes
+            may be submitted to binding arbitration in Nigeria.</p>
+
+        <h3>12.3 No Class Actions</h3>
+        <p>You agree to resolve disputes individually and waive the right to participate in class actions.</p>
+
+        <h2>13. Term and Termination</h2>
+
+        <h3>13.1 Term</h3>
+        <p>These Terms remain in effect while you use the Service.</p>
+
+        <h3>13.2 Termination by You</h3>
+        <p>You may terminate by canceling your subscription.</p>
+
+        <h3>13.3 Termination by Us</h3>
+        <p>We may terminate or suspend your account for:</p>
+        <ul>
+            <li>Violation of these Terms</li>
+            <li>Non-payment</li>
+            <li>Fraudulent or illegal activity</li>
+            <li>Any reason with 30 days notice</li>
+        </ul>
+
+        <h3>13.4 Effect of Termination</h3>
+        <p>Upon termination:</p>
+        <ul>
+            <li>Your right to use the Service ceases immediately</li>
+            <li>You may request a copy of your data within 30 days</li>
+            <li>We may delete your data after 30 days</li>
+        </ul>
+
+        <h2>14. Changes to Terms</h2>
+        <p>We may update these Terms from time to time. Material changes will be notified via email and in-app
+            notification. Continued use after changes constitutes acceptance.</p>
+
+        <h2>15. Multi-User Access</h2>
+
+        <h3>15.1 User Roles</h3>
+        <p>Each business account includes:</p>
+        <ul>
+            <li>1 Owner (primary account holder, charged subscription)</li>
+            <li>1 Admin (elevated permissions, not charged)</li>
+            <li>2 Staff (limited permissions, not charged)</li>
+        </ul>
+
+        <h3>15.2 Owner Responsibilities</h3>
+        <p>The Owner is responsible for:</p>
+        <ul>
+            <li>All subscription payments</li>
+            <li>Managing user access and permissions</li>
+            <li>Ensuring team compliance with Terms</li>
+        </ul>
+
+        <h2>16. Miscellaneous</h2>
+
+        <h3>16.1 Entire Agreement</h3>
+        <p>These Terms constitute the entire agreement between you and DMV Qube.</p>
+
+        <h3>16.2 Severability</h3>
+        <p>If any provision is found invalid, the remaining provisions continue in effect.</p>
+
+        <h3>16.3 No Waiver</h3>
+        <p>Failure to enforce any right does not waive that right.</p>
+
+        <h3>16.4 Assignment</h3>
+        <p>You may not assign these Terms without our consent. We may assign them without restriction.</p>
+
+        <h2>17. Contact Information</h2>
+        <p>For questions about these Terms:</p>
+        <p><strong>Dsquare Multiconcepts Ventures</strong><br>
+            Email: support@dmvqube.com<br>
+            Phone: +234 915 273 2363<br>
+            Address: Akobo Ibadan, Oyo State, Nigeria.
+        </p>
+
+        <hr>
+
+        <div class="consent-box">
+            <p><strong>By using DMV Qube, you acknowledge that you have read, understood, and agree to be bound by these
+                    Terms of Service.</strong></p>
+        </div>
+    </main>
+
+    <footer>

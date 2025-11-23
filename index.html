@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="DMV Qube - Smart Inventory, Order & Supply Management for Nigerian SMEs. Manage inventory, track orders, and connect with suppliers seamlessly.">
+    <meta name="keywords"
+        content="inventory management, order management, supply chain, Nigeria, SME, retail, wholesale, manufacturing">
+    <title>DMV Qube - Smart Inventory & Supply Management</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /*--primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #10b981;*/
+            --primary-color: #03AC13;
+            /*--primary-color: #046307;*/
+            /* Shamrock Green (was Blue #2563eb) */
+            --secondary-color: #028A0F;
+            /* Shamrock Dark (was Dark Blue #1e40af) */
+            --accent-color: #4CAF50;
+            /* Shamrock Light (was Teal #10b981) */
+            /*--text-dark: #1f2937;
+            --text-dark: #254629;
+            --text-dark: #223d25;
+            --text-dark: #182b1a;
+            --text-dark: #192c1c;
+            --text-light: #6b7280;*/
+            --text-dark: #223d25;
+            --text-light: #748676;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            /*background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));*/
+            /*border-radius: 8px;*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-dark);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+        }
+
+        /* Pricing Section */
+        .pricing {
+            background: var(--bg-light);
+            padding: 4rem 2rem;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .pricing-card.featured {
+            border: 3px solid var(--primary-color);
+            transform: scale(1.05);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .price-period {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .features-list li {
+            padding: 0.5rem 0;
+            color: var(--text-light);
+        }
+
+        .features-list li:before {
+            content: "✓ ";
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .registration-fee {
+            background: var(--bg-light);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <!--<div class="logo-icon">DQ</div>-->
+                <div class="logo-icon"><img src="./assets/Qube-mipmap6.png" alt="DMV Qube logo"></div>
+                <span>DMV Qube</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Smart Inventory & Supply Management for Nigerian SMEs</h1>
+            <p>Manage your inventory, track orders, and connect with suppliers seamlessly. Designed for retailers,
+                wholesalers, and manufacturers.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Download on Google Play</a>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">Powerful Features for Your Business</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <h3>Inventory Management</h3>
+                <p>Track stock levels, costs, and prices with ease. Scan barcodes and attach photos or videos to your
+                    products.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>Order Processing</h3>
+                <p>Create and manage orders efficiently. Automatically update inventory with every transaction.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Supplier Marketplace</h3>
+                <p>Connect with suppliers, subscribe to price updates, and find better deals with market pull analysis.
+                </p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Business Analytics</h3>
+                <p>Comprehensive insights into your inventory, sales, and supplier relationships to make informed
+                    decisions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">☁️</div>
+                <h3>Cloud Sync</h3>
+                <p>Access your data from multiple devices with automatic cloud synchronization.</p>
+            </div>
+            <!--<div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Offline Mode</h3>
+                <p>Work without internet connection. Changes sync automatically when you're back online.</p>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="pricing-container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Retailer</h3>
+                    <div class="price">₦17,500</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>Full inventory management</li>
+                        <li>Order processing</li>
+                        <li>Subscribe to wholesalers</li>
+                        <li>Cloud sync & offline mode</li>
+                        <li>Mobile app access</li>
+                        <li>1 Owner + 1 Admin + 2 Staff</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Wholesaler</h3>
+                    <div class="price">₦28,000</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>Everything in Retailer</li>
+                        <li>Public supplier profile</li>
+                        <li>Set minimum sellable units</li>
+                        <li>Bulk pricing options</li>
+                        <li>Price update notifications</li>
+                        <li>Market pull analysis</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Producer</h3>
+                    <div class="price">₦36,000</div>
+                    <div class="price-period">per month</div>
+                    <ul class="features-list">
+                        <li>Everything in Wholesaler</li>
+                        <li>Manufacturer marketplace access</li>
+                        <li>Advanced analytics</li>
+                        <li>Priority support</li>
+                        <li>Bulk operations</li>
+                        <li>Custom reporting</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+
+            <div class="registration-fee">
+                <strong>One-time registration fee: ₦23,500</strong> (Due after 7-day free trial)
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>DMV Qube</h4>
+                <p>Smart inventory and supply management solution for Nigerian SMEs.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li>Email: support@dmvqube.com</li>
+                    <li>Email: privacy@dmvqube.com</li>
+                    <!--<li>Phone: +234 XXX XXX XXXX</li>-->
+                    <li>Phone: +234 915 273 2363</li>
+                    <li>Location: Akobo Ibadan, Oyo State, Nigeria.</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                </ul>
+                <p style="margin-top: 1rem; font-size: 0.9rem;">
+                    <strong>Dsquare Multiconcepts Ventures</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 DMV Qube - Dsquare Multiconcepts Ventures. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
